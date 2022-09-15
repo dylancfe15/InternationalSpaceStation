@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D5E032A628D2C47C00F3F21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032A528D2C47C00F3F21F /* AppDelegate.swift */; };
 		D5E032A828D2C47C00F3F21F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032A728D2C47C00F3F21F /* SceneDelegate.swift */; };
-		D5E032AA28D2C47C00F3F21F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032A928D2C47C00F3F21F /* ViewController.swift */; };
+		D5E032AA28D2C47C00F3F21F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032A928D2C47C00F3F21F /* MapViewController.swift */; };
 		D5E032AD28D2C47C00F3F21F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E032AB28D2C47C00F3F21F /* Main.storyboard */; };
 		D5E032AF28D2C47F00F3F21F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5E032AE28D2C47F00F3F21F /* Assets.xcassets */; };
 		D5E032B228D2C47F00F3F21F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E032B028D2C47F00F3F21F /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		D5E032A228D2C47C00F3F21F /* InternationalSpaceStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternationalSpaceStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E032A528D2C47C00F3F21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5E032A728D2C47C00F3F21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5E032A928D2C47C00F3F21F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5E032A928D2C47C00F3F21F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D5E032AC28D2C47C00F3F21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5E032AE28D2C47F00F3F21F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5E032B128D2C47F00F3F21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,13 +58,21 @@
 			children = (
 				D5E032A528D2C47C00F3F21F /* AppDelegate.swift */,
 				D5E032A728D2C47C00F3F21F /* SceneDelegate.swift */,
-				D5E032A928D2C47C00F3F21F /* ViewController.swift */,
+				D5E032B928D2C7DC00F3F21F /* Views */,
 				D5E032AB28D2C47C00F3F21F /* Main.storyboard */,
 				D5E032AE28D2C47F00F3F21F /* Assets.xcassets */,
 				D5E032B028D2C47F00F3F21F /* LaunchScreen.storyboard */,
 				D5E032B328D2C47F00F3F21F /* Info.plist */,
 			);
 			path = InternationalSpaceStation;
+			sourceTree = "<group>";
+		};
+		D5E032B928D2C7DC00F3F21F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5E032A928D2C47C00F3F21F /* MapViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5E032AA28D2C47C00F3F21F /* ViewController.swift in Sources */,
+				D5E032AA28D2C47C00F3F21F /* MapViewController.swift in Sources */,
 				D5E032A628D2C47C00F3F21F /* AppDelegate.swift in Sources */,
 				D5E032A828D2C47C00F3F21F /* SceneDelegate.swift in Sources */,
 			);
