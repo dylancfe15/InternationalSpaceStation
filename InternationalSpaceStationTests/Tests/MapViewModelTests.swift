@@ -6,10 +6,13 @@
 //
 
 import XCTest
+import Combine
 @testable import InternationalSpaceStation
 
 final class MapViewModelTests: XCTestCase {
-    var viewModel: MapViewModel!
+    private var viewModel: MapViewModel!
+    private var locationPublisher: AnyCancellable!
+    private var expectation: XCTestExpectation!
 
     override func setUp() {
         super.setUp()
@@ -22,9 +25,20 @@ final class MapViewModelTests: XCTestCase {
         super.tearDown()
 
         viewModel = nil
+        locationPublisher?.cancel()
     }
 
     func testFetchInternationalSpaceStationCurrentLocation() {
+        expectation = expectation(description: "expectation")
+
+        locationPublisher = viewModel.locationSubject.eraseToAnyPublisher().sink(receiveValue: { [weak self] response in
+            XCTAssertEqual(response.message, "success")
+
+            self?.expectation.fulfill()
+        })
+
         viewModel.fetchInternationalSpaceStationCurrentLocation()
+
+        waitForExpectations(timeout: 3)
     }
 }

@@ -19,6 +19,7 @@
 		D5E032C728D2CE8F00F3F21F /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032C628D2CE8F00F3F21F /* AppError.swift */; };
 		D5E032D728D2E1B800F3F21F /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032C828D2E17700F3F21F /* MapViewModelTests.swift */; };
 		D5E032DB28D2E24100F3F21F /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032DA28D2E24100F3F21F /* MockDataManager.swift */; };
+		D5E032DE28D2E97A00F3F21F /* iss-now.json in Resources */ = {isa = PBXBuildFile; fileRef = D5E032DD28D2E2C100F3F21F /* iss-now.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E032DE28D2E97A00F3F21F /* iss-now.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

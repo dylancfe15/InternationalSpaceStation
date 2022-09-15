@@ -18,19 +18,21 @@ final class MapDataManager: MapDataManaging {
             return
         }
 
-        URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else {
-                completion(nil, error)
-                return
-            }
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
+            URLSession.shared.dataTask(with: url) {(data, response, error) in
+                guard let data = data else {
+                    completion(nil, error)
+                    return
+                }
 
-            do {
-                let decodedResponse = try JSONDecoder().decode(ISSLocationResponse.self, from: data)
+                do {
+                    let decodedResponse = try JSONDecoder().decode(ISSLocationResponse.self, from: data)
 
-                completion(decodedResponse, nil)
-            } catch let error {
-                completion(nil, error)
-            }
-        }.resume()
+                    completion(decodedResponse, nil)
+                } catch let error {
+                    completion(nil, error)
+                }
+            }.resume()
+        }
     }
 }

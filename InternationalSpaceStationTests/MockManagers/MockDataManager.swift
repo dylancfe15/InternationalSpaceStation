@@ -10,9 +10,9 @@ import Foundation
 
 final class MockDataManager: MapDataManaging {
     func fetchInternationalSpaceStationCurrentLocation(completion: @escaping (ISSLocationResponse?, Error?) -> Void) {
-        if let path = Bundle.main.path(forResource: "iss-now", ofType: "json") {
+        if let url = Bundle(for: MapViewModelTests.self).url(forResource: "iss-now", withExtension: "json") {
             do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let data = try Data(contentsOf: url, options: .mappedIfSafe)
                 let response = try JSONDecoder().decode(ISSLocationResponse.self, from: data)
 
                 completion(response, nil)
