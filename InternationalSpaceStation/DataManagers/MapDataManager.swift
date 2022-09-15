@@ -18,7 +18,7 @@ final class MapDataManager: MapDataManaging {
             return
         }
 
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+        URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data else {
                 completion(nil, error)
                 return
@@ -31,8 +31,6 @@ final class MapDataManager: MapDataManaging {
             } catch let error {
                 completion(nil, error)
             }
-        }
-
-        task.resume()
+        }.resume()
     }
 }
