@@ -15,12 +15,14 @@ final class MapViewModel {
     var dataManager: MapDataManaging = MapDataManager()
 
     func fetchInternationalSpaceStationCurrentLocation() {
-        dataManager.fetchInternationalSpaceStationCurrentLocation { [weak self] response, error in
-            guard let response = response, let `self` = self else {
-                return
-            }
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [weak self] timer in
+            self?.dataManager.fetchInternationalSpaceStationCurrentLocation { [weak self] response, error in
+                guard let response = response, let `self` = self else {
+                    return
+                }
 
-            self.locationSubject.send(response)
+                self.locationSubject.send(response)
+            }
         }
     }
 }
