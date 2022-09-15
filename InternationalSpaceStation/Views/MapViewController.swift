@@ -7,11 +7,21 @@
 
 import UIKit
 
-class MapViewController: UIViewController {
+final class MapViewController: UIViewController {
+
+    private lazy var mapView = MapView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.addSubview(mapView)
+
+        NSLayoutConstraint.activate([
+            mapView.topAnchor.constraint(equalTo: view.topAnchor),
+            mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
 
