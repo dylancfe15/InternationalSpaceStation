@@ -14,6 +14,10 @@
 		D5E032AF28D2C47F00F3F21F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5E032AE28D2C47F00F3F21F /* Assets.xcassets */; };
 		D5E032B228D2C47F00F3F21F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E032B028D2C47F00F3F21F /* LaunchScreen.storyboard */; };
 		D5E032BC28D2C9B900F3F21F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032BB28D2C9B900F3F21F /* MapView.swift */; };
+		D5E032BF28D2CAF000F3F21F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032BE28D2CAF000F3F21F /* MapViewModel.swift */; };
+		D5E032C228D2CBE200F3F21F /* MapDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032C128D2CBE200F3F21F /* MapDataManager.swift */; };
+		D5E032C528D2CD5D00F3F21F /* ISSLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032C428D2CD5D00F3F21F /* ISSLocationResponse.swift */; };
+		D5E032C728D2CE8F00F3F21F /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032C628D2CE8F00F3F21F /* AppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		D5E032B128D2C47F00F3F21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5E032B328D2C47F00F3F21F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5E032BB28D2C9B900F3F21F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D5E032BE28D2CAF000F3F21F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		D5E032C128D2CBE200F3F21F /* MapDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataManager.swift; sourceTree = "<group>"; };
+		D5E032C428D2CD5D00F3F21F /* ISSLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSLocationResponse.swift; sourceTree = "<group>"; };
+		D5E032C628D2CE8F00F3F21F /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +68,10 @@
 			children = (
 				D5E032A528D2C47C00F3F21F /* AppDelegate.swift */,
 				D5E032A728D2C47C00F3F21F /* SceneDelegate.swift */,
+				D5E032C028D2CBC400F3F21F /* DataManagers */,
+				D5E032C328D2CD3400F3F21F /* Models */,
 				D5E032B928D2C7DC00F3F21F /* Views */,
+				D5E032BD28D2CADF00F3F21F /* ViewModels */,
 				D5E032AB28D2C47C00F3F21F /* Main.storyboard */,
 				D5E032AE28D2C47F00F3F21F /* Assets.xcassets */,
 				D5E032B028D2C47F00F3F21F /* LaunchScreen.storyboard */,
@@ -84,6 +95,31 @@
 				D5E032BB28D2C9B900F3F21F /* MapView.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		D5E032BD28D2CADF00F3F21F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D5E032BE28D2CAF000F3F21F /* MapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D5E032C028D2CBC400F3F21F /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				D5E032C128D2CBE200F3F21F /* MapDataManager.swift */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		D5E032C328D2CD3400F3F21F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5E032C428D2CD5D00F3F21F /* ISSLocationResponse.swift */,
+				D5E032C628D2CE8F00F3F21F /* AppError.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5E032AA28D2C47C00F3F21F /* MapViewController.swift in Sources */,
+				D5E032BF28D2CAF000F3F21F /* MapViewModel.swift in Sources */,
 				D5E032BC28D2C9B900F3F21F /* MapView.swift in Sources */,
 				D5E032A628D2C47C00F3F21F /* AppDelegate.swift in Sources */,
+				D5E032C728D2CE8F00F3F21F /* AppError.swift in Sources */,
+				D5E032C528D2CD5D00F3F21F /* ISSLocationResponse.swift in Sources */,
+				D5E032C228D2CBE200F3F21F /* MapDataManager.swift in Sources */,
 				D5E032A828D2C47C00F3F21F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
