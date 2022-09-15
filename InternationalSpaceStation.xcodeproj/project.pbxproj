@@ -17,7 +17,19 @@
 		D5E032C228D2CBE200F3F21F /* MapDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032C128D2CBE200F3F21F /* MapDataManager.swift */; };
 		D5E032C528D2CD5D00F3F21F /* ISSLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032C428D2CD5D00F3F21F /* ISSLocationResponse.swift */; };
 		D5E032C728D2CE8F00F3F21F /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032C628D2CE8F00F3F21F /* AppError.swift */; };
+		D5E032D728D2E1B800F3F21F /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032C828D2E17700F3F21F /* MapViewModelTests.swift */; };
+		D5E032DB28D2E24100F3F21F /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E032DA28D2E24100F3F21F /* MockDataManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5E032D228D2E1B300F3F21F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5E0329A28D2C47C00F3F21F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5E032A128D2C47C00F3F21F;
+			remoteInfo = InternationalSpaceStation;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D5E032A228D2C47C00F3F21F /* InternationalSpaceStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternationalSpaceStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +44,21 @@
 		D5E032C128D2CBE200F3F21F /* MapDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataManager.swift; sourceTree = "<group>"; };
 		D5E032C428D2CD5D00F3F21F /* ISSLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSLocationResponse.swift; sourceTree = "<group>"; };
 		D5E032C628D2CE8F00F3F21F /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		D5E032C828D2E17700F3F21F /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
+		D5E032CE28D2E1B300F3F21F /* InternationalSpaceStationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InternationalSpaceStationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5E032DA28D2E24100F3F21F /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
+		D5E032DD28D2E2C100F3F21F /* iss-now.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "iss-now.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D5E0329F28D2C47C00F3F21F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5E032CB28D2E1B300F3F21F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E032A428D2C47C00F3F21F /* InternationalSpaceStation */,
+				D5E032CF28D2E1B300F3F21F /* InternationalSpaceStationTests */,
 				D5E032A328D2C47C00F3F21F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E032A228D2C47C00F3F21F /* InternationalSpaceStation.app */,
+				D5E032CE28D2E1B300F3F21F /* InternationalSpaceStationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +144,40 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D5E032CF28D2E1B300F3F21F /* InternationalSpaceStationTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5E032DC28D2E29E00F3F21F /* MockResponses */,
+				D5E032D828D2E21C00F3F21F /* MockManagers */,
+				D5E032D928D2E22800F3F21F /* Tests */,
+			);
+			path = InternationalSpaceStationTests;
+			sourceTree = "<group>";
+		};
+		D5E032D828D2E21C00F3F21F /* MockManagers */ = {
+			isa = PBXGroup;
+			children = (
+				D5E032DA28D2E24100F3F21F /* MockDataManager.swift */,
+			);
+			path = MockManagers;
+			sourceTree = "<group>";
+		};
+		D5E032D928D2E22800F3F21F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D5E032C828D2E17700F3F21F /* MapViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D5E032DC28D2E29E00F3F21F /* MockResponses */ = {
+			isa = PBXGroup;
+			children = (
+				D5E032DD28D2E2C100F3F21F /* iss-now.json */,
+			);
+			path = MockResponses;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +198,24 @@
 			productReference = D5E032A228D2C47C00F3F21F /* InternationalSpaceStation.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D5E032CD28D2E1B300F3F21F /* InternationalSpaceStationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5E032D428D2E1B300F3F21F /* Build configuration list for PBXNativeTarget "InternationalSpaceStationTests" */;
+			buildPhases = (
+				D5E032CA28D2E1B300F3F21F /* Sources */,
+				D5E032CB28D2E1B300F3F21F /* Frameworks */,
+				D5E032CC28D2E1B300F3F21F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5E032D328D2E1B300F3F21F /* PBXTargetDependency */,
+			);
+			name = InternationalSpaceStationTests;
+			productName = InternationalSpaceStationTests;
+			productReference = D5E032CE28D2E1B300F3F21F /* InternationalSpaceStationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -151,6 +228,10 @@
 				TargetAttributes = {
 					D5E032A128D2C47C00F3F21F = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					D5E032CD28D2E1B300F3F21F = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D5E032A128D2C47C00F3F21F;
 					};
 				};
 			};
@@ -168,6 +249,7 @@
 			projectRoot = "";
 			targets = (
 				D5E032A128D2C47C00F3F21F /* InternationalSpaceStation */,
+				D5E032CD28D2E1B300F3F21F /* InternationalSpaceStationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -179,6 +261,13 @@
 			files = (
 				D5E032B228D2C47F00F3F21F /* LaunchScreen.storyboard in Resources */,
 				D5E032AF28D2C47F00F3F21F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5E032CC28D2E1B300F3F21F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +289,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5E032CA28D2E1B300F3F21F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5E032D728D2E1B800F3F21F /* MapViewModelTests.swift in Sources */,
+				D5E032DB28D2E24100F3F21F /* MockDataManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5E032D328D2E1B300F3F21F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5E032A128D2C47C00F3F21F /* InternationalSpaceStation */;
+			targetProxy = D5E032D228D2E1B300F3F21F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D5E032B028D2C47F00F3F21F /* LaunchScreen.storyboard */ = {
@@ -384,6 +490,42 @@
 			};
 			name = Release;
 		};
+		D5E032D528D2E1B300F3F21F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5H9LF74GEN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Dylan-Chen.InternationalSpaceStationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InternationalSpaceStation.app/InternationalSpaceStation";
+			};
+			name = Debug;
+		};
+		D5E032D628D2E1B300F3F21F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5H9LF74GEN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Dylan-Chen.InternationalSpaceStationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InternationalSpaceStation.app/InternationalSpaceStation";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -401,6 +543,15 @@
 			buildConfigurations = (
 				D5E032B728D2C47F00F3F21F /* Debug */,
 				D5E032B828D2C47F00F3F21F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5E032D428D2E1B300F3F21F /* Build configuration list for PBXNativeTarget "InternationalSpaceStationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5E032D528D2E1B300F3F21F /* Debug */,
+				D5E032D628D2E1B300F3F21F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
