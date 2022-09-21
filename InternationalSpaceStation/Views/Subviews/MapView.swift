@@ -48,6 +48,9 @@ final class MapView: MKMapView {
 // MARK: - MapViewUpdatable
 
 extension MapView: MapViewUpdatable {
+
+    /// Update the location of the pin with the response
+    /// - Parameter response: reponse of the ISS location
     func updateLocation(with response: ISSLocationResponse) {
         guard let latitude = response.iss_position?.latitude,
               let longitude = response.iss_position?.longitude else { return }
